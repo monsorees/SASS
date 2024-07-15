@@ -1,0 +1,54 @@
+/*
+
+  ERRADO / TRABALHOSO
+
+  @media (max-width: 1000px){
+    .item4{
+      grid-row: 2;
+    }
+  
+  }
+  
+  @media (max-width: 800px){
+    .item3{
+      grid-row: 2;
+    }
+    .item4{
+      grid-row: 3;
+    }
+  }
+  
+  @media (max-width: 595px){
+    .item2{
+      grid-row: 2;
+    }
+    .item3{
+      grid-row: 3;
+    }
+    .item4{
+      grid-row: 4;
+    }
+  }
+*/
+
+
+
+@mixin responsive-grid($class){
+  @media (min-width: 600px){
+    #{$class}{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+  @media (min-width: 800px){
+    #{$class}{
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (min-width: 900px) {
+    #{$class}{
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+}

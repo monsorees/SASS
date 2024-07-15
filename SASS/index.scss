@@ -1,0 +1,23 @@
+@import '_classes.scss';
+@import '_mixin.scss';
+
+.container{
+  width: calculate-porcentagem(4);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 10px;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+}
+
+@include responsive-grid('.container');
+
+.column{
+  background-color: rgb(14, 82, 44);
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}

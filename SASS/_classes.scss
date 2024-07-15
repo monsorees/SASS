@@ -1,0 +1,4 @@
+
+@function calculate-porcentagem($columns){
+  @return 100% / $columns
+}
